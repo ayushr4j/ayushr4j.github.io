@@ -2,6 +2,7 @@ html{
     padding: 0; margin: 0;
     background-color: #1D2B35;
     color: whitesmoke;
+    overflow-x: hidden;
 }
 body{
     padding: 0; margin: 0 auto;
@@ -11,6 +12,10 @@ body{
 
 .row{
     max-width: 1280px;
+}
+
+img{
+    width: 90%;
 }
 
 #topbar{
@@ -93,9 +98,21 @@ section{
     text-align: center;
 }
 
-section > h2{
+/*section > h2 & h3*/
+h1{
+    font-size: 3em;
+}
+h2{
     font-size: 2.5em;
 }
+h3{
+    font-size: 1.5em;
+}
+h4{
+    font-size: 1.15em;
+}
+
+
 
 .imageSection{
     padding-top: 5em;
@@ -136,7 +153,9 @@ button{
     padding: 1em 2em;
     border-radius: 3em;
     background-color: #FF5151;
-    border: solid transparent 1px;
+    border: solid transparent 0px;
+    color: white;
+    font-size: 1.25em;
 }
 button.secondary{
     background-color: transparent;
@@ -152,13 +171,18 @@ button.secondary{
     margin: 10px;
     min-height: 15em;
     vertical-align: middle;
+    box-shadow: 0px 30px 60px 0px rgb(145 152 156 / 9%);
+    transition: box-shadow .2s ease;
+}
+.card:hover{
+    box-shadow: 0 42px 60px 0 rgb(0 0 0 / 10%);
 }
 .card > .icon{
     position: relative;
     display: block;
     width: 2em;
     height: 2em;
-    background-color: azure;
+    background-color: #FF5151;
     color: white;
     border-radius: .25em;
     margin: .5em;
@@ -230,6 +254,239 @@ button.secondary{
     text-decoration: none;
     display: inline-block;
 }
+.about{
+    text-align: center;
+}
+.about1{
+    position: relative;
+    margin: 0 auto;
+    max-width: 640px;
+    width: 90%;
+    text-align: center;
+    box-sizing: content-box;
+    text-align: left;
+    display: block;
+    background-image: url(../res/aboutbg.jpg);
+    background-size: cover;
+    background-position: center right;
+    
+}
+.about1 > h2{
+    margin: .5em 0;
+}
+.about1 > p{
+    width: 90%;
+    max-width: 320px;
+}
+.about2{
+    position: relative;
+    max-width: 310px;
+    width: 90%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+
+#valuesbox{
+    max-width: 800px;
+}
+
+.about > section{
+    padding: 1em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    
+    
+}
+
+form{
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+label{
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    display: block;
+    font-size: 1em;
+    padding: 1em 0;
+    text-align: left;
+}
+label > input, label > select, label > textarea{
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    height: 2.5em;
+    font-size: inherit;
+    padding: 0; margin: 0;
+    margin-top: .5em;
+    background-color: transparent;
+    border: solid gainsboro 1px;
+    box-sizing: border-box;
+}
+label > textarea{
+    height: 20em;
+}
+form > button{
+    border-radius: 3px;
+    background-color: #2872fa;
+    border: none;
+    outline: none;
+    position: relative;
+    padding: .5em 1em;
+
+}
+
+.container.terms{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+pre{
+    border-radius: 3px;
+    background-color: rgb(242,245,247);
+    padding: 1em;
+}
+
+.card.services > img{
+    width: 100%;
+    height: auto;
+    border-radius: inherit;
+}
+
+.coloredbg{
+    position: relative;
+    padding: 1em;
+}
+.coloredbg::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100vw; height: 100%;
+        background-color: inherit;
+        transform: translateX(-50vw);
+        background-color: white;
+        z-index: 1;
+}
+.coloredbg > *{
+    position: relative;
+    z-index: 2;
+}
+
+#gridlast{
+    position: relative;
+    background-color: #fa346e;
+    background-image: url(../res/gridbg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+#gridlast::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100vw; height: 100%;
+    background-color: inherit;
+    transform: translateX(-50vw);
+    opacity: .5;
+    z-index: 1;
+}
+#gridlast::after{
+    content: "";
+    position: relative;
+    top: 0; left: 0;
+    width: auto; height: 1px;
+    background-color: inherit;
+    opacity: .5;
+    z-index: 1;
+    display: block;
+    clear: both;
+}
+#gridlast > *{
+    position: relative; z-index: 2;
+    color: white;
+}
+
+.floatyImage{
+    float: right;
+    max-width: 300px;
+    width: 90%;
+}
+
+.appUseCard{
+    padding-left: 30px;
+    width: 240px;
+    min-height: 20em;
+}
+.features{
+    display: inline-block;
+    margin: 2em;
+}
+.features > .icon{
+    position: relative;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    font-size: 1.5em;
+    background-color: #fa346e;
+    margin-right: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    line-height: 3em;
+}
+.features > h3{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#download_section{
+    padding: 2em;
+    color: white !important;
+}
+#download_section > h2{
+    color: white !important;
+    font-size: 3em;
+}
+#download_section > img{
+    vertical-align: top;
+}
+#stats_section{
+    text-align: justify;
+    text-align-last: justify;
+    max-width: 700px;
+    width: 90%;
+    margin: 0 auto;
+}
+.stats{
+    display: inline-block;
+    padding: 1em;
+}
+.stats > span{
+    font-size: 2.5em;
+}
+.stats > span::after{
+    font-size: .5em;
+    content: "+";
+    vertical-align: top;
+}
+.stats > p{
+    font-size: 1em;
+}
+
+.download_google{
+    width: 10em;
+    height: 4em;
+    display: inline-block;
+    position: relative;
+    background-image: url(../res/google-play.webp);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 @media (max-width: 470px) {
     .card{
@@ -249,12 +506,12 @@ button.secondary{
     .card.profile > h3{
         margin: .5em 0;
     }
-    .card.profile > img{
+    .card > img{
         float: left;
         margin-right: 1em;
         margin-bottom: 1em;   
-        width: 7em;
-        height: 7em;
+        width: 7em !important;
+        height: 7em !important;
         min-height: auto;
     }
 
