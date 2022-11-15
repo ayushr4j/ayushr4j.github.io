@@ -21,11 +21,11 @@ img{
 #topbar{
     position: relative;
     left: 0; top: 0;
-    height: 5em;
+    min-height: 5em;
     width: 100%;
     text-align: justify;
     text-align-last: justify;
-
+    margin-bottom: 1em;
 }
 #logo{
     position: relative;
