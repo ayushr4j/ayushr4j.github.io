@@ -414,10 +414,9 @@ pre{
 .coloredbg::before{
         content: "";
         position: absolute;
-        top: 0; left: 50%;
-        width: 100vw; height: 100%;
+        top: 0; left: calc( (100% - 100vw)/2 );
+        width: calc(100vw); height: 100%;
         background-color: inherit;
-        transform: translateX(-50vw);
         background-color: white;
         z-index: 1;
 }
@@ -435,12 +434,9 @@ pre{
     background-position: center right;
 }
 #gridlast::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 100vw; height: 100%;
+
     background-color: inherit;
-    transform: translateX(-50vw);
+
     opacity: .85;
     z-index: 1;
 }
