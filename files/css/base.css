@@ -561,7 +561,9 @@ pre{
     font-size: 2em;
     text-align: center;
     display: block;
-    line-height: 2em;
+    line-height: 1em;
+    padding-top: .5em;
+    padding-bottom: 1em;
 }
 
 .contactCard{
@@ -591,7 +593,7 @@ pre{
     padding: .5em;
     margin-left: 1em;
     margin-right: 1em;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
 }
 
 .contactCard > .socialLinks{
