@@ -3,12 +3,12 @@ html{
     background-color: #1D2B35;
     color: whitesmoke;
     overflow-x: hidden;
+    width: 100vw;
 }
 body{
     padding: 0; margin: 0 auto;
     color: whitesmoke;
     max-width: 1280px;
-    overflow-x: hidden;
 }
 
 .row{
@@ -18,12 +18,6 @@ body{
 img{
     width: 90%;
 }
-
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
 
 
 #topbar{
@@ -38,6 +32,9 @@ a{
     background-color: white;
     z-index: 10;
     box-sizing: border-box;
+}
+#topbar::before{
+    box-shadow: 0px 0px 8px 2px rgba(0,0,0,.1);
 }
 .logo{
     position: relative;
@@ -79,7 +76,8 @@ a{
 
 .nav-item{
     padding: .5em .5em;
-    
+    text-decoration: none;
+    color: inherit;
     display: inline-block;
 }
 .nav{
@@ -115,7 +113,6 @@ a{
 }
 
 .container{
-    min-height: 750px;
     display: none;
 }
 .container.active{
@@ -385,6 +382,7 @@ form > button{
 .container.terms{
     max-width: 800px;
     margin: 0 auto;
+    padding: 1em;
 }
 
 pre{
@@ -526,6 +524,7 @@ pre{
     padding: 2em;
     text-align: center;
     text-align-last: center ;
+    color: white;
 }
 .stats > span{
     font-size: 2.5em;
@@ -537,10 +536,11 @@ pre{
 }
 .stats > p{
     font-size: 1em;
+    color: inherit;
 }
 
 .card.reviewCard{
-    width: 200px;
+    max-width: 200px;
     min-height: 22em;
 }
 .card.reviewCard > .rating{
@@ -569,6 +569,10 @@ pre{
     line-height: 1em;
     padding-top: .5em;
     padding-bottom: 1em;
+}
+.contactcardicon > a{
+    color: inherit !important;
+    text-decoration: none;
 }
 
 .contactCard{
@@ -674,6 +678,8 @@ pre{
     
 
     .card{
+        box-sizing: border-box;
+        max-width: 90%;
         width: 90%;
         min-height: auto;
     }
