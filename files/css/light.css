@@ -1,17 +1,20 @@
 html{
-    color: #767B92;
+    color: #242F65;
     background-color: #e1e8ed;
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 body{
-    color: #767B92;
+    color: #242F65;
 }
 #footer{
     background-color: rgba(255,255,255,0.5);
 }
 
-#logo,h1,h2,h3,h4{
+.logo,h1,h2,h3,h4{
     color: #242F65;
+}
+p{
+    color: #767B92;
 }
 
 .card{

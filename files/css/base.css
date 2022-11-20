@@ -18,16 +18,27 @@ img{
     width: 90%;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
 #topbar{
-    position: relative;
+    position: sticky;
     left: 0; top: 0;
-    min-height: 5em;
+    height: 4em;
+    padding: 0 !important;
     width: 100%;
     text-align: justify;
     text-align-last: justify;
     margin-bottom: 1em;
+    background-color: white;
+    z-index: 10;
+    box-sizing: border-box;
 }
-#logo{
+.logo{
     position: relative;
     height: 100%;
     width: auto;
@@ -36,21 +47,21 @@ img{
     vertical-align: middle;
 
 }
-#logo > object{
+.logo > object{
     position: relative;
-    top: 1em;
     height: 3em;
     width: auto;
-    vertical-align: top;
+    vertical-align: middle;
 }
-#logo > span{
+.logo > span{
     position: relative;
     font-size: 2em;
     left: .25em;
-    line-height: 2.5em;
+    line-height: 2em;
     text-transform: uppercase;
-    letter-spacing: .5em;
+    letter-spacing: .25em;
     display: inline-block;
+    vertical-align: middle;
     
 }
 
@@ -60,16 +71,22 @@ img{
     text-align-last: left;
     display: inline-block;
     vertical-align: middle;
-
+}
+#nav::before{
+    display: none;
 }
 
 .nav-item{
-    padding: 0 1em;
+    padding: .5em .5em;
+    
+    display: inline-block;
 }
 .nav{
     display: none;
 }
-
+#footer-nav > .nav-item{
+    font-size: .7em;
+}
 
 #footer{
     position: relative;
@@ -80,9 +97,20 @@ img{
 #footer > div{
     margin: 1em;
 }
+.socialLinks{
+    padding-bottom: 1em;
+    display: block;
+    position: relative;
+}
+.socialLinks > a::before{
+    display: inline-block;
+    font-size: 1em;
+    padding: .5em;
+    color: grey !important;
+}
 #copyright{
     position: relative;
-    padding-top: 2em;
+    padding-top: 1em;
 }
 
 .container{
@@ -120,6 +148,7 @@ h4{
 .imageSection > div{
     display: inline-block;
     max-width: 320px;
+    width: 90%;
     text-align: left;
 }
 .imageSection > img{
@@ -292,6 +321,10 @@ button.secondary{
     max-width: 800px;
 }
 
+.card.values{
+    min-height: 17em;
+}
+
 .about > section{
     padding: 1em;
     margin: 0 auto;
@@ -326,6 +359,10 @@ label > input, label > select, label > textarea{
     background-color: transparent;
     border: solid gainsboro 1px;
     box-sizing: border-box;
+    padding-left: .5em;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.5em;
 }
 label > textarea{
     height: 20em;
@@ -351,6 +388,9 @@ pre{
     padding: 1em;
 }
 
+.card.services{
+    min-height: 17em;
+}
 .card.services > img{
     width: 100%;
     height: auto;
@@ -360,14 +400,15 @@ pre{
 .coloredbg{
     position: relative;
     padding: 1em;
+    text-align: center;
 }
 .coloredbg::before{
         content: "";
         position: absolute;
-        top: 0;
-        width: 100vw; height: 100%;
+        top: 0; left: 50%;
+        width: 200vw; height: 100%;
         background-color: inherit;
-        transform: translateX(-50vw);
+        transform: translateX(-100vw);
         background-color: white;
         z-index: 1;
 }
@@ -391,7 +432,7 @@ pre{
     width: 100vw; height: 100%;
     background-color: inherit;
     transform: translateX(-50vw);
-    opacity: .5;
+    opacity: .85;
     z-index: 1;
 }
 #gridlast::after{
@@ -418,9 +459,20 @@ pre{
 
 .appUseCard{
     padding-left: 30px;
-    width: 240px;
+    width: 280px;
     min-height: 20em;
+    box-sizing: border-box;
 }
+.appUseCard > h3{
+    display: inline-block;
+    vertical-align: middle;
+}
+.appUseCard > .icon{
+    display: inline-block;
+    margin-right: 1em;
+    vertical-align: middle;
+}
+
 .features{
     display: inline-block;
     margin: 2em;
@@ -431,12 +483,13 @@ pre{
     width: 3em;
     height: 3em;
     font-size: 1.5em;
-    background-color: #fa346e;
+    background-color: white;
     margin-right: 1em;
     display: inline-block;
     vertical-align: middle;
-    color: white;
+    color: black;
     line-height: 3em;
+    box-shadow: 0px 0px 8px 2px rgba(0,0,0,.1);
 }
 .features > h3{
     vertical-align: middle;
@@ -453,6 +506,8 @@ pre{
 }
 #download_section > img{
     vertical-align: top;
+    margin-top: 1em;
+    filter: drop-shadow(0px -2px 8px rgba(0,0,0,.3));
 }
 #stats_section{
     text-align: justify;
@@ -463,7 +518,9 @@ pre{
 }
 .stats{
     display: inline-block;
-    padding: 1em;
+    padding: 2em;
+    text-align: center;
+    text-align-last: center ;
 }
 .stats > span{
     font-size: 2.5em;
@@ -477,6 +534,15 @@ pre{
     font-size: 1em;
 }
 
+.card.reviewCard{
+    width: 200px;
+    min-height: 22em;
+}
+.card.reviewCard > .rating{
+    color: #FDCC0D;
+    
+}
+
 .download_google{
     width: 10em;
     height: 4em;
@@ -488,7 +554,106 @@ pre{
     background-repeat: no-repeat;
 }
 
+
+
+.contactcardicon::before{
+    color: inherit !important;
+    font-size: 2em;
+    text-align: center;
+    display: block;
+    line-height: 2em;
+}
+
+.contactCard{
+    display: inline-block;
+    position: relative;
+    width: 90%;
+    max-width: 280px;
+    min-height: 170px;
+
+    border-radius: 3px;
+
+    margin: 2%;
+    vertical-align: middle;
+    box-shadow: 0px 0px 8px 2px rgba(0,0,0,.1);
+    background-color: white;
+}
+.contactCard > .logo{
+    line-height: 170px;
+    height: 170px;
+    left: 0;
+}
+.contactcardicon{
+    position: relative;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0em;
+    padding: .5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+.contactCard > .socialLinks{
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .imageSection > div, .imageSection > img{
+        max-width: 90%;
+    }
+    #stats_section{
+        text-align: center;
+        text-align-last: center;
+    }
+
+    #nav::before{
+        position: absolute;
+        content: "\e921";
+        display: inline-block;
+        height: 4em;
+        width: 4em;
+        line-height: 4em;
+        top: -4em;
+        right: 0;
+        color: #1D2B35;
+        text-align: center;
+        text-align-last: center;
+    }
+
+    #nav {
+        position: absolute;
+        right: 1em; top: 4em;
+        height: 0;
+        width: 180px;
+        height: auto;
+        background-color: #1D2B35;
+        color: white;
+        border-radius: 4px;
+        
+    }
+    #nav > .nav-item{
+        font-size: 0;
+        display: block;
+        overflow: hidden;
+        color: white;
+        padding: 1em;
+        
+    }
+    #nav:hover{
+        box-shadow: 0 0 8px 2px rgba(0,0,0,.1);
+    }
+    #nav:hover > .nav-item {
+        font-size: 1em;
+    }
+}
 @media (max-width: 470px) {
+    
+    
+
+    
+    
+
     .card{
         width: 90%;
         min-height: auto;
@@ -514,6 +679,16 @@ pre{
         height: 7em !important;
         min-height: auto;
     }
+
+    .card.appUseCard > .icon{
+        float: none;
+    }
+
+    .card.appUseCard > p{
+        margin-top: 2em;
+    }
+
+    
 
     /*.card.profile:nth-child(odd){
         text-align: right;
