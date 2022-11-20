@@ -1,15 +1,17 @@
 html{
+    position: relative;
     padding: 0; margin: 0;
     background-color: #1D2B35;
     color: whitesmoke;
     overflow-x: hidden;
     width: 100vw;
 }
-body{
+body,.site{
     padding: 0; margin: 0 auto;
     color: whitesmoke;
     max-width: 1280px;
 }
+
 
 .row{
     max-width: 1280px;
@@ -413,9 +415,9 @@ pre{
         content: "";
         position: absolute;
         top: 0; left: 50%;
-        width: 200vw; height: 100%;
+        width: 100vw; height: 100%;
         background-color: inherit;
-        transform: translateX(-100vw);
+        transform: translateX(-50vw);
         background-color: white;
         z-index: 1;
 }
